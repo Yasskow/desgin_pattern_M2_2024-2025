@@ -1,4 +1,4 @@
-package fr.uge.poo.paint.ex4;
+package fr.uge.poo.paint.ex5;
 
 abstract class ShapeInRect {
 	private final int x;

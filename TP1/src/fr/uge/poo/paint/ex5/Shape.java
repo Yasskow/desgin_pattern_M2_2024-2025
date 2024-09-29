@@ -1,6 +1,6 @@
-package fr.uge.poo.paint.ex4;
+package fr.uge.poo.paint.ex5;
 
-import java.awt.Graphics2D;
+import java.awt.*;
 
 public sealed interface Shape permits Line, Ellipse, Rectangle {
 	void drawFigure(Graphics2D graphics);

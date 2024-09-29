@@ -1,8 +1,8 @@
-package fr.uge.poo.paint.ex4;
+package fr.uge.poo.paint.ex5;
 
 import java.awt.*;
 
-public final class Ellipse extends ShapeInRect implements Shape{
+public final class Ellipse extends ShapeInRect implements Shape {
 	private final int x0;
 	private final int y0;
 	private final int width;
