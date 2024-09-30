@@ -1,4 +1,4 @@
-package fr.uge.poo.paint.ex5;
+package fr.uge.poo.paint.ex6;
 
 import java.awt.*;
 
@@ -19,4 +19,5 @@ public final class Rectangle extends ShapeInRect{
 	public void drawFigure(Graphics2D graphics) {
 		graphics.drawRect(x0, y0, width, height);
 	}
+
 }

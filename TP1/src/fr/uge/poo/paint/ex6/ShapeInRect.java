@@ -1,4 +1,4 @@
-package fr.uge.poo.paint.ex4;
+package fr.uge.poo.paint.ex6;
 
 abstract sealed class ShapeInRect implements Shape permits Rectangle, Ellipse{
 	int x;
@@ -7,7 +7,7 @@ abstract sealed class ShapeInRect implements Shape permits Rectangle, Ellipse{
     int width;
     int centerX;
     int centerY;
-    public ShapeInRect(int x, int y, int height, int width) {
+    public ShapeInRect(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
         this.height = height;
@@ -16,8 +16,13 @@ abstract sealed class ShapeInRect implements Shape permits Rectangle, Ellipse{
         this.centerY = y + (height / 2);
     }
 
-    
-    public double distance(int x0, int y0){
-        return (centerX-x0)*(centerX-x0) + (centerY-y0)*(centerY-y0);
+    public double distance(int x, int y){
+        return (centerX-x)*(centerX-x) + (centerY-y)*(centerY-y);
     }
+    
+	@Override
+	public WindowsSize size() {
+		return new WindowsSize(x+width, y+height);
+	}
+    
 }

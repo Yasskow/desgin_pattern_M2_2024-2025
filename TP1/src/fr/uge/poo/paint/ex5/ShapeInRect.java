@@ -1,12 +1,12 @@
 package fr.uge.poo.paint.ex5;
 
-abstract class ShapeInRect {
-	private final int x;
-    private final int y;
-    private final int height;
-    private final int width;
-    private final int centerX;
-    private final int centerY;
+abstract sealed class ShapeInRect implements Shape permits Rectangle, Ellipse{
+	int x;
+    int y;
+    int height;
+    int width;
+    int centerX;
+    int centerY;
     public ShapeInRect(int x, int y, int height, int width) {
         this.x = x;
         this.y = y;
