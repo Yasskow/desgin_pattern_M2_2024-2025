@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="RegularDuckFactory">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TP1/RegularDuckFactory.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
