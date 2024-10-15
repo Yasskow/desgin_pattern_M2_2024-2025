@@ -90,12 +90,6 @@ public class UberClient {
 //        }
 //    }
 public static class Builder {
-    private String firstName;
-    private String lastName;
-    private long uid;
-    private final List<Integer> grades = new ArrayList<>();
-    private final List<String> emails = new ArrayList<>();
-    private final List<String> phoneNumbers = new ArrayList<>();
 
     // Step 1: Forcing firstName to be called first
     public static FirstNameStep newBuilder() {
