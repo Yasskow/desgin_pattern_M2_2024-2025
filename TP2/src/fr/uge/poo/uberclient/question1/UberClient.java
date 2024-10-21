@@ -133,7 +133,7 @@ public class UberClient {
     public static void main(String[] args) {
         //var arnaud = new UberClient("Arnaud","Carayol",1,List.of(1,2,5,2,5,1,1,1),List.of("arnaud.carayol@univ-eiffel.fr","arnaud.carayol@u-pem.fr"),List.of("07070707070707"));
         //var youssef = new UberClient("Youssef", "Bergeron", List.of(5), List.of("youssefbergeron@outlook.fr"),List.of());
-        var arnaud = Builder.newBuilder().firstName("Arnaud").lastName("Carayol").uid(4).grades(1).emails("a@t.fr").phoneNumbers("050402").build();
+        var arnaud = Builder.newBuilder().firstName("Arnaud").lastName("Carayol").uid(4).grades(1).emails("arnaud.carayol@univ-eiffel.fr").phoneNumbers("050402").build();
         var average5 = new toHtmlWithEmailsAndAverageOverLast5Grades();
         average5.setAverage(s -> s.stream().limit(5).mapToLong(l -> l).average().orElseThrow(() -> new AssertionError("Client are meant to have at least one grade")));
 

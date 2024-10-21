@@ -13,6 +13,6 @@ public class toHtmlWithEmailsAndAverageOverLast5Grades implements UberClientForm
 
     @Override
     public String format(UberClient.UberClientInfo uberClientInfo) {
-        return String.format("<h2>%s %s (%1.2f*) : %s </h2>",uberClientInfo.firstName(),uberClientInfo.lastName(),average.averageCalculator(uberClientInfo.grades()),uberClientInfo.emails());
+        return String.format("<h2>%s %s (%1.2f*) : %s </h2>",uberClientInfo.firstName(),uberClientInfo.lastName(),average.averageCalculator(uberClientInfo.grades()),printEmails(uberClientInfo.emails()));
     }
 }
