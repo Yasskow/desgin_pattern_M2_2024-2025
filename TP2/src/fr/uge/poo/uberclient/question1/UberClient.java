@@ -3,6 +3,7 @@ package fr.uge.poo.uberclient.question1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.OptionalDouble;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class UberClient {
@@ -12,15 +13,53 @@ public class UberClient {
     private final List<Integer> grades;
     private final List<String> emails;
     private final List<String> phoneNumbers;
+    private AverageCalculator average;
 
-    public record UberClientInfo(String firstName, String lastName, List<Integer> grades, List<String> emails) {
+    public class UberClientInfo{
+        String firstName;
+        String lastName;
 
+        OptionalDouble average;
+        List<String> emails;
+
+        private UberClientInfo(String firstName, String lastName, List<Integer> grades, List<String> emails, AverageCalculator strategy) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.average = strategy.averageCalculator(grades);
+            this.emails = emails;
+        }
+
+        private String emailsSeparator(String emails) {
+            var devideEmail = emails.split("@");
+            var firstPart = devideEmail[0];
+            var  secondPart = devideEmail[1].split("\\.");
+            var maskedFirstPart = firstPart.charAt(0) + "*";
+            var maskedSecondPart = secondPart[0].charAt(0) + "*";
+            return maskedFirstPart +  "@" + maskedSecondPart;
+        }
+        private List<String> printEmails(List<String>  emails){
+            return emails.stream().map(s -> s = emailsSeparator(s)).toList();
+        }
+
+        public String firstName() {
+            return firstName;
+        }
+        public String lastName() {
+            return lastName;
+        }
+
+        public OptionalDouble average() {
+            return average;
+        }
+        public List<String> emails() {
+            return printEmails(emails);
+        }
     }
+
     public static class Builder {
 
         // Step 1: Forcing firstName to be called first
         public static FirstNameStep newBuilder() {
-
             return new BuilderSteps();
         }
 
@@ -114,11 +153,19 @@ public class UberClient {
     }
 
     private UberClientInfo infos(){
-        return new UberClientInfo(firstName, lastName, grades, emails);
+        return new UberClientInfo(firstName, lastName, grades, emails, AverageCalculator.STANDARD);
+    }
+
+    private UberClientInfo infos(AverageCalculator c){
+        return new UberClientInfo(firstName, lastName, grades, emails, c);
     }
 
     public String toExport(UberClientFormatter formatter){
         return formatter.format(infos());
+    }
+
+    public String toExport(UberClientFormatter formatter, AverageCalculator c){
+        return formatter.format(infos(c));
     }
 
     private UberClient(String firstName, String lastName, long uid, List<Integer> grades, List<String> emails, List<String> phoneNumbers){
@@ -135,10 +182,8 @@ public class UberClient {
         //var youssef = new UberClient("Youssef", "Bergeron", List.of(5), List.of("youssefbergeron@outlook.fr"),List.of());
         var arnaud = Builder.newBuilder().firstName("Arnaud").lastName("Carayol").uid(4).grades(1).emails("arnaud.carayol@univ-eiffel.fr").phoneNumbers("050402").build();
         var average5 = new toHtmlWithEmailsAndAverageOverLast5Grades();
-        average5.setAverage(s -> s.stream().limit(5).mapToLong(l -> l).average().orElseThrow(() -> new AssertionError("Client are meant to have at least one grade")));
 
         var average7 = new toHTMWithAverageOverLast7Grades();
-        average7.setAverage(s -> s.stream().limit(7).mapToLong(l -> l).average().orElseThrow(() -> new AssertionError("Client are meant to have at least one grade")));
         System.out.println(arnaud.toExport(new ToHTML()));
         System.out.println(arnaud.toExport(new toHTMLSimple()));
         System.out.println(arnaud.toExport(new toHtmlWithEmails()));

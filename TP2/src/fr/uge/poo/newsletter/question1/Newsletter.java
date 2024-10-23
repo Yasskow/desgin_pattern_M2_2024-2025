@@ -10,18 +10,16 @@ public class Newsletter {
     private String name;
     private EEMailer mailer;
     private final Set<User> subscribers = new HashSet<>();
-    private final NationalityRestriction nationalityRestriction;
-    private final AgeRestriction ageRestriction;
+    private final UserRestriction userRestriction;
 
-    public  Newsletter(String name, NationalityRestriction nationalityRestriction, AgeRestriction ageRestriction){
+    public  Newsletter(String name, UserRestriction userRestriction){
         this.name =  Objects.requireNonNull(name, "Your name is null");
         this.mailer = new EEMailer();
-        this.nationalityRestriction = nationalityRestriction;
-        this.ageRestriction = ageRestriction;
+        this.userRestriction = userRestriction;
     }
 
     public Newsletter(String name){
-        this(name, nationality -> nationality.equals(nationality), age -> age == age);
+        this(name, (nationality, age, email) -> true);
     }
 
     public record User(String name, String email, int age, User.Nationality nationality) {
@@ -48,20 +46,18 @@ public class Newsletter {
                 throw new IllegalArgumentException("Age must be positive");
             }
             Objects.requireNonNull(nationality);
-
-
         }
     }
 
     public void subscribe(User user){
         Objects.requireNonNull(user, "User is null");
-        if (nationalityRestriction.isValid(user.nationality)  && ageRestriction.isValid(user.age)){
-            if(!subscribers.add(user)){
-                throw new IllegalStateException("Subscriber already exists");
+            if(userRestriction.isValid(user.nationality, user.age, user.email)){
+                if(!subscribers.add(user)){
+                    throw new IllegalStateException("Subscriber already exists");
+                }
+            }else{
+                throw new IllegalArgumentException("Your age or nationality or email are wrong");
             }
-        }else{
-            throw new IllegalArgumentException("Invalid nationality or age");
-        }
     }
 
     public void unsubscribe(User user){
@@ -84,15 +80,18 @@ public class Newsletter {
         var carayol = new User("Arnaud", "arnaud.carayol@gustave.fr", 45, User.Nationality.FRENCH);
         var youssef = new User("Youssef", "Youssef.bergeron@gustave.fr", 25, User.Nationality.SPANISH);
         var christophe = new User("Christophe", "christophe@gustave.fr", 23, User.Nationality.FRENCH);
-        var steven = new User("Steven", "steven.ly@gustave.fr", 25, User.Nationality.BRITISH);
-        var yass = new User("Yassine", "Yassine.ben@gustave.fr", 25, User.Nationality.BRITISH);
+        var steven = new User("Steven", "steven.ly@univ-eiffel.fr", 26, User.Nationality.BRITISH);
+        var yass = new User("Yassine", "Yassine.ben@univ-eiffel.fr", 25, User.Nationality.BRITISH);
 
-        var potter4ever = new Newsletter("Potter4ever", nationality -> nationality == User.Nationality.BRITISH, age -> age > 17);
-        var java4ever = new Newsletter("Java4ever", nationality -> nationality == User.Nationality.BRITISH || nationality == User.Nationality.FRENCH, age -> age > 21);
+        var potter4ever = new Newsletter("Potter4ever", (nationality, age, email) -> nationality == User.Nationality.BRITISH && age > 17);
+        var java4ever = new Newsletter("Java4ever", (nationality, age, email) -> (nationality == User.Nationality.BRITISH || nationality == User.Nationality.FRENCH )&& age > 21);
+        var whyme = new Newsletter("Why me", (nationality, age, email) -> age%2 ==0 && email.endsWith("@univ-eiffel.fr"));
 
         //potter4ever.subscribe(carayol);
         potter4ever.subscribe(steven);
         potter4ever.sendMessage("coucou", "Coucou à tous");
         java4ever.subscribe(yass);
+        whyme.subscribe(steven);
+        whyme.subscribe(carayol);
     }
 }
