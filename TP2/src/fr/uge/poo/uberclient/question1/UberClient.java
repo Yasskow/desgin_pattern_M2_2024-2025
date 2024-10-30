@@ -18,7 +18,6 @@ public class UberClient {
     public class UberClientInfo{
         String firstName;
         String lastName;
-
         OptionalDouble average;
         List<String> emails;
 
@@ -38,7 +37,7 @@ public class UberClient {
             return maskedFirstPart +  "@" + maskedSecondPart;
         }
         private List<String> printEmails(List<String>  emails){
-            return emails.stream().map(s -> s = emailsSeparator(s)).toList();
+            return emails.stream().map(s -> emailsSeparator(s)).toList();
         }
 
         public String firstName() {
@@ -79,14 +78,14 @@ public class UberClient {
         public interface GradesStep {
             EmailStep grades(int grade);
         }
-        public interface EmailStep {
+        public interface EmailStep extends GradesStep {
             PhoneNumberStep emails(String email);
         }
-        public interface PhoneNumberStep {
+        public interface PhoneNumberStep extends EmailStep {
             Build phoneNumbers(String phoneNumber);
         }
 
-        public interface Build{
+        public interface Build  extends PhoneNumberStep{
             UberClient build();
         }
 
@@ -183,7 +182,6 @@ public class UberClient {
         var arnaud = Builder.newBuilder().firstName("Arnaud").lastName("Carayol").uid(4).grades(1).emails("arnaud.carayol@univ-eiffel.fr").phoneNumbers("050402").build();
         var average5 = new toHtmlWithEmailsAndAverageOverLast5Grades();
 
-        var average7 = new toHTMWithAverageOverLast7Grades();
         System.out.println(arnaud.toExport(new ToHTML()));
         System.out.println(arnaud.toExport(new toHTMLSimple()));
         System.out.println(arnaud.toExport(new toHtmlWithEmails()));

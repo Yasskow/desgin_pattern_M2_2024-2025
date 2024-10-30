@@ -1,4 +1,4 @@
-package fr.uge.poo.newsletter.question2;
+package fr.uge.poo.newsletter.question3;
 
 import com.evilcorp.eemailer.EEMailer;
 
