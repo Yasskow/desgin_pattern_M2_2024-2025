@@ -57,12 +57,10 @@ public class UberClient {
 
     public static class Builder {
 
-        // Step 1: Forcing firstName to be called first
         public static FirstNameStep newBuilder() {
             return new BuilderSteps();
         }
 
-        // Interfaces for each step in the building process
         public interface FirstNameStep {
             LastNameStep firstName(String firstName);
         }
@@ -90,7 +88,7 @@ public class UberClient {
         }
 
 
-        // Private static class that implements all the steps
+
         private static class BuilderSteps implements FirstNameStep, LastNameStep, UidStep, GradesStep, EmailStep, PhoneNumberStep, Build {
             private String firstName;
             private String lastName;
