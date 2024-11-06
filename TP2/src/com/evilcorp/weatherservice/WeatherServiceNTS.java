@@ -1,14 +1,10 @@
-package fr.uge.poo.weatherservice.question1;
+package com.evilcorp.weatherservice;
 
 /* Assume that this class is not thread-safe */
 public class WeatherServiceNTS implements WeatherService {
 
-    private WeatherServiceNTS() {
+    public WeatherServiceNTS() {
         System.out.println("Creating a connection to WeatherServiceTS");
-    }
-    private static final WeatherServiceNTS INSTANCE = new WeatherServiceNTS();
-    public static WeatherServiceNTS getInstance() {
-        return INSTANCE;
     }
 
     public int query(String city){

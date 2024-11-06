@@ -1,4 +1,4 @@
-package fr.uge.poo.weatherservice.question1;
+package com.evilcorp.weatherservice;
 
 public interface WeatherService {
     int query(String city);

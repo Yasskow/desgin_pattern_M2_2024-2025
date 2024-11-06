@@ -1,6 +1,7 @@
-package fr.uge.poo.weatherservice.question1;
-
+package fr.uge.poo.weatherservice.question3;
 import com.evilcorp.weatherservice.WeatherService;
+
+import java.util.Optional;
 
 public class Application {
 
@@ -13,25 +14,29 @@ public class Application {
 
         Thread.ofPlatform().start(() -> {
             for(;;){
-                WeatherService service = WeatherServices.getInstance();
+                Optional<WeatherService> service = WeatherServices.getInstance();
                 try {
                     Thread.sleep(1_000);
                 } catch (InterruptedException e) {
                     throw new AssertionError();
                 }
-                System.out.println("Paris : "+service.query("Paris"));
+                if(service.isPresent()){
+                    System.out.println("Madrid : "+service.get().query("Madrid"));
+                }
             }
         });
 
         Thread.ofPlatform().start(() -> {
             for(;;){
-                WeatherService service = WeatherServices.getInstance();
+                Optional<WeatherService> service = WeatherServices.getInstance();
                 try {
                     Thread.sleep(1_000);
                 } catch (InterruptedException e) {
                     throw new AssertionError();
                 }
-                System.out.println("Madrid : "+service.query("Madrid"));
+                if(service.isPresent()){
+                    System.out.println("Madrid : "+service.get().query("Madrid"));
+                }
             }
         });
     }

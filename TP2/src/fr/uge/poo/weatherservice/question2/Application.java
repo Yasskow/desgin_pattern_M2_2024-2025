@@ -1,4 +1,4 @@
-package fr.uge.poo.weatherservice.question1;
+package fr.uge.poo.weatherservice.question2;
 
 import com.evilcorp.weatherservice.WeatherService;
 
