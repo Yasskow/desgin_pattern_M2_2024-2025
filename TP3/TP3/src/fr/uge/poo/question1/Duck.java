@@ -12,4 +12,4 @@ public interface Duck {
 /***
  * Le contrat de l'interface a changé. Et le comportement des classes peuvent changer suivant l'utilisation faite
  * par l'utilisateur.
- * */
+ ***/
