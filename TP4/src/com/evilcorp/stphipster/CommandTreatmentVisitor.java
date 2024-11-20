@@ -1,9 +1,9 @@
-package com.evilcorp.stp;
+package com.evilcorp.stphipster;
 
 import java.util.HashMap;
 import java.util.Objects;
 
-public class CommandTreatmentVisitor implements STPCommandVisitor{
+public class CommandTreatmentVisitor implements STPCommandVisitor {
     HashMap<Integer,Long> timers = new HashMap<>();
 
     @Override
