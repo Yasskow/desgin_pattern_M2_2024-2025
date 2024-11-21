@@ -17,6 +17,9 @@ public class Triviale {
                  }
                  if(nameParse.isEmpty()){
                      var command = new CommandTreatmentVisitor();
+                     nameParse.get().accept(command);
+                 } else{
+
                  }
              }
          }
