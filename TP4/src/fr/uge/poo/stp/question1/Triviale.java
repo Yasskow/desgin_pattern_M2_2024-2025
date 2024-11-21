@@ -11,12 +11,13 @@ public class Triviale {
          try(var sc = new Scanner(System.in)){
              while(sc.hasNextLine()){
                  var name = sc.nextLine();
-                 var nameParse = STPParser.parse(sc.nextLine());
                  if(name.equals("quit")){
                      break;
                  }
+
+                 var nameParse = STPParser.parse(name);
+                 var command = new CommandTreatmentVisitor();
                  if(nameParse.isEmpty()){
-                     var command = new CommandTreatmentVisitor();
                      nameParse.get().accept(command);
                  } else{
 

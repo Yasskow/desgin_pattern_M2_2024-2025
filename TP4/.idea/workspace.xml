@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e7688671-2dc6-4878-82d1-065dfd8c0e2f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/CommandTreatmentVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/ElapsedTimeCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/HelloCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/STPCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/STPCommandVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/STPParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/StartTimerCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/StopTimerCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP2/src.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP3/TP3/src/fr/uge/poo/question3/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/TP3/src/fr/uge/poo/question3/Logger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stp/CommandTreatmentVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stp/CommandTreatmentVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stp/HelloCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stp/HelloCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stp/STPCommandVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stp/STPCommandVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stp/StartTimerCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stp/StartTimerCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question1/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question1/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question1/Triviale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question1/Triviale.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2p6wMVNF1VH6H5NJTlmkCjYbyt0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/2ind2/benmechich/Documents/M2/desgin_pattern_M2_2024-2025/TP4&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.evilcorp.stphipster" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.uge.poo.stp.question1.Application" />
+      <module name="TP4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.uge.poo.stp.question1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7688671-2dc6-4878-82d1-065dfd8c0e2f" name="Changes" comment="" />
+      <created>1732099784700</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732099784700</updated>
+    </task>
+    <servers />
+  </component>
+</project>
