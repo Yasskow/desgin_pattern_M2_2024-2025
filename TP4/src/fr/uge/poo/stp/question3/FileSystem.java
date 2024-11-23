@@ -3,7 +3,9 @@ package fr.uge.poo.stp.question3;
 import java.io.IOException;
 import java.nio.file.Path;
 
-public interface FileSystem {
+public sealed interface FileSystem permits Directory, File {
+    String getName();
+    Path getPath();
 }
 
 

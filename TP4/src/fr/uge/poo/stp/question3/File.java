@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Objects;
 
-public class File implements FileSystem{
+public final class File implements FileSystem{
     private final Path path;
     private final String name;
     private final String extension;
@@ -15,9 +15,21 @@ public class File implements FileSystem{
         this.extension = Objects.requireNonNull(extension, "extension is null");
     }
 
-    public static FileSystem of(Path path) {
+    public static File of(Path path) {
         Objects.requireNonNull(path, "path is null");
 
         return new File(path, path.getFileName().toString(), path.getFileName().toString().toLowerCase());
+    }
+
+    public Path getPath() {
+        return path;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getExtension() {
+        return extension;
     }
 }

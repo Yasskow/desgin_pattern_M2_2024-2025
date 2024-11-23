@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Directory implements FileSystem{
+public final class Directory implements FileSystem{
     private final Path path;
     private final String name;
     private final List<FileSystem> subDirectories;
@@ -18,7 +18,7 @@ public class Directory implements FileSystem{
         this.subDirectories = List.copyOf(subDirectories);
     }
 
-    public static FileSystem of(Path path) throws IOException {
+    public static Directory of(Path path) throws IOException {
         Objects.requireNonNull(path, "Path is null");
         var listElements = Files.list(path);
         var allElements = new ArrayList<FileSystem>();
@@ -36,5 +36,17 @@ public class Directory implements FileSystem{
             }
         });
         return new Directory(path, path.getFileName().toString(), allElements);
+    }
+
+    public List<FileSystem> getSubDirectories() {
+        return subDirectories;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Path getPath() {
+        return path;
     }
 }

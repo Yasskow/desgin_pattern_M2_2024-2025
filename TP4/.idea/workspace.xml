@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7688671-2dc6-4878-82d1-065dfd8c0e2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP2/src.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TP3/TP3/src/fr/uge/poo/question3/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TP3/TP3/src/fr/uge/poo/question3/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stp/STPCommandVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stp/STPCommandVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stphipster/ElapsedTimeCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/ElapsedTimeCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stphipster/HelloCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/HelloCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stphipster/STPCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/STPCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stphipster/STPCommandVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/STPCommandVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stphipster/StartTimerCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/StartTimerCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/evilcorp/stphipster/StopTimerCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/evilcorp/stphipster/StopTimerCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question1/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question1/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/Directory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/FileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/FileSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +44,7 @@
     "Application.Application.executor": "Run",
     "Application.ApplicationHipster.executor": "Run",
     "Application.fr.uge.poo.stp.question2.Application.executor": "Run",
+    "Application.fr.uge.poo.stp.question3.Application.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -115,7 +108,8 @@
       <workItem from="1732203040055" duration="24000" />
       <workItem from="1732203071590" duration="6351000" />
       <workItem from="1732265144978" duration="7361000" />
-      <workItem from="1732359647671" duration="10344000" />
+      <workItem from="1732359647671" duration="10402000" />
+      <workItem from="1732382479992" duration="1958000" />
     </task>
     <servers />
   </component>
