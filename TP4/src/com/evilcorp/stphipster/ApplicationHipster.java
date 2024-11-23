@@ -1,11 +1,9 @@
-package fr.uge.poo.stp.question1;
-
-import com.evilcorp.stp.*;
+package com.evilcorp.stphipster;
 
 import java.util.Optional;
 import java.util.Scanner;
 
-public class Application {
+public class ApplicationHipster {
     public static void main(String[] args) {
         var commandFind = new CommandTreatmentVisitor();
         var scan = new Scanner(System.in);
@@ -23,8 +21,8 @@ public class Application {
             }
 
             STPCommand cmd = answer.get();
-            cmd.accept(commandFind);
+            commandFind.visit(cmd);
+         }
         }
     }
-}
 

@@ -8,5 +8,5 @@ public interface Logger {
     }
 
     void log(Level level, String message);
-    void setLevelFilter(Predicate<Level> predicate );
+    void setLevelFilter(Predicate<Level> predicate);
 }
