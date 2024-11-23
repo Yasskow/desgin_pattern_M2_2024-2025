@@ -7,11 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public final class Directory implements FileSystem{
-    private final Path path;
-    private final String name;
-    private final List<FileSystem> subDirectories;
-    
+public record Directory(Path path, String name, List<FileSystem> subDirectories) implements FileSystem {
     public Directory(Path path, String name, List<FileSystem> subDirectories) {
         this.path = Objects.requireNonNull(path, "Path is null");
         this.name = Objects.requireNonNull(name, "Name is null");
@@ -25,28 +21,16 @@ public final class Directory implements FileSystem{
 
         listElements.forEach(path1 -> {
             var tmp = path1.toFile();
-            if(tmp.isDirectory()) {
+            if (tmp.isDirectory()) {
                 try {
                     allElements.add(of(path1));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-            }else{
+            } else {
                 allElements.add(File.of(path1));
             }
         });
         return new Directory(path, path.getFileName().toString(), allElements);
-    }
-
-    public List<FileSystem> getSubDirectories() {
-        return subDirectories;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Path getPath() {
-        return path;
     }
 }

@@ -13,16 +13,16 @@ public class Application {
         Objects.requireNonNull(extension, "extension is null");
         List<String> files = new ArrayList<>();
         var allElements = Directory.of(directory);
-        allElements.getSubDirectories().forEach(fileSystem -> {
+        allElements.subDirectories().forEach(fileSystem -> {
             switch(fileSystem){
                 case File file -> {
-                    if(file.getName().endsWith(extension)){
-                        files.add(file.getName());
+                    if(file.name().endsWith(extension)){
+                        files.add(file.name());
                     }
                 }
                 case Directory directory1 -> {
                     try {
-                        files.addAll(findFilesWithExtension(directory1.getPath(), extension));
+                        files.addAll(findFilesWithExtension(directory1.path(), extension));
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }

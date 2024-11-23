@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 
 public sealed interface FileSystem permits Directory, File {
-    String getName();
-    Path getPath();
 }
 
 
