@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7688671-2dc6-4878-82d1-065dfd8c0e2f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/Directory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/File.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/FileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/uge/poo/stp/question3/FileSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +16,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Interface" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,31 +33,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Application.executor": "Run",
-    "Application.ApplicationHipster.executor": "Run",
-    "Application.fr.uge.poo.stp.question2.Application.executor": "Run",
-    "Application.fr.uge.poo.stp.question3.Application.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/2ind2/benmechich/Documents/M2/desgin_pattern_M2_2024-2025/TP4",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/2ind2/benmechich/Documents/M2/desgin_pattern_M2_2024-2025/TP4&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.evilcorp.stphipster" />
@@ -89,14 +70,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -105,26 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732099784700</updated>
-      <workItem from="1732203040055" duration="24000" />
-      <workItem from="1732203071590" duration="6351000" />
-      <workItem from="1732265144978" duration="7361000" />
-      <workItem from="1732359647671" duration="10402000" />
-      <workItem from="1732382479992" duration="2098000" />
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
